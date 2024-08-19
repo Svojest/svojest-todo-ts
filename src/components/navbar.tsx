@@ -6,12 +6,12 @@ import {
 	NavbarContent,
 	NavbarItem,
 	NavbarMenuToggle,
-	NavbarMenu,
+	NavbarMenu
 } from '@nextui-org/navbar'
 
 import { siteConfig } from '@/config/site'
 import { ThemeSwitch } from '@/components/theme-switch'
-import { HeartFilledIcon, TelegramIcon } from '@/components/icons'
+import { GithubIcon, HeartFilledIcon, TelegramIcon } from '@/components/icons'
 
 export const Navbar = () => {
 	return (
@@ -25,6 +25,9 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className='hidden sm:flex basis-1/5 sm:basis-full' justify='end'>
+				<Link isExternal href={siteConfig.links.github}>
+					<GithubIcon className='text-default-500' size={20} />
+				</Link>
 				<Link isExternal href={siteConfig.links.telegram}>
 					<TelegramIcon className='text-default-500' size={20} />
 				</Link>
